@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a LeonjAI account.">
+  <title>Create an account — LeonjAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="app/assets/img/favicon.png">
+  <link rel="stylesheet" href="app/assets/css/style.css"><link rel="stylesheet" href="app/assets/css/signup.css">
+</head>
+<body class="signup-page">
+  <header class="site-header signup-header"><a class="brand" href="index.html"><img class="brand-logo" src="app/assets/img/leonjai-logo.png" alt="LeonjAI logo"></a><a class="text-link" href="index.html"><span>Back to home<small>ホームに戻る</small></span> ↗</a></header>
+  <main class="signup-main"><section class="signup-card"><p class="eyebrow">MEMBER SPACE<small>メンバースペース</small></p><h1>Create your account.<small>アカウントを作成</small></h1><p class="signup-intro">Save projects and stay in touch with the studio.<small>作品を保存して、スタジオとつながりましょう。</small></p>
+    <form id="signupForm">
+      <label>Full name<small>お名前</small><input name="fullName" autocomplete="name" required maxlength="100" placeholder="Your name / お名前"></label>
+      <label>Studio or company <span class="optional">(optional)</span><small>スタジオ・会社名（任意）</small><input name="studioName" autocomplete="organization" maxlength="120" placeholder="Studio name / スタジオ名"></label>
+      <label>Email address<small>メールアドレス</small><input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label>
+      <label>What are you interested in?<small>ご興味のあるサービス</small><select name="serviceInterest" required><option value="" selected disabled>Select a service / サービスを選択</option><option value="brand">Brand identity / ブランドデザイン</option><option value="web">Web design / ウェブデザイン</option><option value="motion">Motion & film / 映像・モーション</option><option value="art-direction">Art direction / アートディレクション</option><option value="other">Something else / その他</option></select></label>
+      <label>Password<small>パスワード（8文字以上）</small><input type="password" name="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters / 8文字以上"></label>
+      <label>Confirm password<small>パスワードを再入力</small><input type="password" name="confirmPassword" autocomplete="new-password" minlength="8" required placeholder="Enter your password again / 再入力"></label>
+      <button class="button button-dark signup-submit" type="submit"><span class="button-label">Create account<small>アカウントを作成</small></span><span>↗</span></button>
+      <p class="signup-status" id="signupStatus" aria-live="polite"></p>
+    </form>
+    <p class="signup-login">Already have an account? <a href="index.html?login=1" id="returnToLogin">Log in</a><small>すでにアカウントをお持ちですか？ログインはこちら。</small></p>
+  </section></main>
+  <script src="app/assets/js/config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app/assets/js/signup.js"></script>
+</body>
+</html>
