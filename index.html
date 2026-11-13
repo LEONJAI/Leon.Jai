@@ -136,22 +136,37 @@
   </section>
 
   <section class="account-page" id="account-page" aria-labelledby="account-title" hidden>
-    <div class="account-page__top"><div><p class="account-eyebrow">L JAI · YOUR SPACE</p><h1 id="account-title">Profile</h1></div><a class="account-home" href="#hero">Home <span aria-hidden="true">↗</span></a></div>
+    <div class="account-page__top"><div><p class="account-eyebrow">L JAI · YOUR SPACE</p><h1 id="account-title">Profile</h1></div></div>
     <div class="account-layout">
       <aside class="account-rail">
-        <div class="account-avatar" aria-hidden="true">LJ</div>
-        <h2 id="account-name">Your name</h2>
-        <p id="account-email" class="account-email"></p>
-        <div class="account-rail__details">
+        <div class="account-identity">
+          <div class="account-identity__photo">
+            <div class="account-avatar"><span id="account-avatar-initials" aria-hidden="true">LJ</span><img id="account-avatar-image" alt="Profile photo" hidden><button class="account-avatar-camera" id="account-photo-trigger" type="button" aria-label="Change profile photo" title="Change profile photo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7.5h3l1.5-2h7l1.5 2h3A1.5 1.5 0 0 1 21.5 9v9A1.5 1.5 0 0 1 20 19.5H4A1.5 1.5 0 0 1 2.5 18V9A1.5 1.5 0 0 1 4 7.5Z"/><circle cx="12" cy="13" r="3.5"/></svg></button></div>
+            
+            <input id="account-photo-input" class="account-photo-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+            <p id="account-photo-status" class="account-photo-status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="account-identity__copy">
+            <div class="account-username-line"><h2 id="account-name">Your name</h2><button class="account-edit-button" id="account-edit-username" type="button">Edit</button></div>
+            <form id="account-username-form" class="account-username-form" hidden>
+              <label for="account-username-input">Username</label>
+              <input id="account-username-input" name="username" minlength="3" maxlength="32" autocomplete="nickname" required>
+              <div class="account-username-actions"><button class="account-edit-button account-edit-save" type="submit">Save</button><button class="account-edit-button" id="account-cancel-username" type="button">Cancel</button></div>
+              <p id="account-username-status" role="status" aria-live="polite"></p>
+            </form>
+            <p id="account-email" class="account-email"></p>
+          </div>
+        </div>        <div class="account-rail__details">
           <div><span>Birthday</span><strong id="account-birthday">Not provided</strong></div>
           <div><span>Address</span><strong id="account-address">Not provided</strong></div>
         </div>
-        <a class="account-home account-home--rail" href="#hero">⌂ <span>Home</span></a>
+        
         <button class="account-text-button account-password-button" id="account-password" type="button">Change password <span aria-hidden="true">↗</span></button>
+        <a class="account-home account-home--rail" href="#member-gallery" id="account-open-gallery"><span aria-hidden="true">⌂</span><span class="account-home__username" id="account-gallery-user">JSARU5810 GALLERY</span><span aria-hidden="true">↗</span></a>
         <button class="account-text-button account-signout" id="account-signout" type="button">Sign out <span aria-hidden="true">↗</span></button>
       </aside>
       <div class="account-details">
-        <div class="account-details__heading"><div><p class="account-eyebrow">YOUR COLLECTION</p><h2>Gallery</h2></div><span class="account-gallery-user" id="account-gallery-user"></span></div>
+        <div class="account-details__heading"><div><p class="account-eyebrow">YOUR COLLECTION</p><h2>EDIT WORKPLACE BELOW:</h2></div></div>
         <div class="personal-gallery__filters" role="group" aria-label="Filter gallery">
           <button type="button" data-gallery-filter="photos" aria-pressed="true">Photos</button>
           <button type="button" data-gallery-filter="logos" aria-pressed="false">Logos</button>
@@ -161,16 +176,32 @@
           <article class="personal-work" data-kind="photos"><div class="gallery-art art-sakura"><span class="art-mark">✿</span><b>Sakura<br>season</b><i>01 / PHOTO</i></div><h2>Soft bloom</h2><p>Photo · Spring collection</p></article>
           <article class="personal-work" data-kind="photos"><div class="gallery-art art-coast"><span class="art-mark">◒</span><b>Blue<br>hour</b><i>02 / PHOTO</i></div><h2>Quiet coast</h2><p>Photo · Places</p></article>
           <article class="personal-work" data-kind="photos"><div class="gallery-art art-garden"><span class="art-mark">✳</span><b>In the<br>garden</b><i>03 / PHOTO</i></div><h2>Garden notes</h2><p>Photo · Details</p></article>
-          <article class="personal-work" data-kind="photos"><div class="gallery-art art-sun"><span class="art-mark">☼</span><b>Warm<br>light</b><i>04 / PHOTO</i></div><h2>Golden light</h2><p>Photo · Studies</p></article>
+          <article class="personal-work" data-kind="photos"><div class="gallery-art art-sun"><span class="art-mark">☼</span><b>Warm<br>light</b><i>04 / PHOTO</i></div><h2>Golden light</h2><p>Photo · Studies</p></article>          <article class="personal-work" data-kind="photos"><div class="gallery-art art-moon"><span class="art-mark">☾</span><b>After<br>glow</b><i>05 / PHOTO</i></div><h2>Afterglow</h2><p>Photo · Evening</p></article>
+          <article class="personal-work" data-kind="photos"><div class="gallery-art art-field"><span class="art-mark">✿</span><b>Open<br>fields</b><i>06 / PHOTO</i></div><h2>Open fields</h2><p>Photo · Nature</p></article>
           <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo"><span class="logo-round">LJ</span><b>L JAI</b><i>01 / IDENTITY</i></div><h2>L JAI Studio</h2><p>Logo · Brand identity</p></article>
           <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--two"><span class="logo-round">花</span><b>HANAMI</b><i>02 / IDENTITY</i></div><h2>Hanami market</h2><p>Logo · Packaging</p></article>
-          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--three"><span class="logo-round">K</span><b>KANTO<br>COFFEE</b><i>03 / IDENTITY</i></div><h2>Kanto Coffee</h2><p>Logo · Café</p></article>
+          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--three"><span class="logo-round">K</span><b>KANTO<br>COFFEE</b><i>03 / IDENTITY</i></div><h2>Kanto Coffee</h2><p>Logo · Café</p></article>          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--four"><span class="logo-round">水</span><b>MIZU</b><i>04 / IDENTITY</i></div><h2>Mizu ceramics</h2><p>Logo · Craft</p></article>
+          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--five"><span class="logo-round">N</span><b>NAMI</b><i>05 / IDENTITY</i></div><h2>Nami skincare</h2><p>Logo · Beauty</p></article>
+          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--six"><span class="logo-round">A</span><b>ATELIER</b><i>06 / IDENTITY</i></div><h2>Atelier N°8</h2><p>Logo · Studio</p></article>
           <article class="personal-work" data-kind="videos"><div class="gallery-art art-video"><span class="video-play">▶</span><b>Studio<br>journal</b><i>00:24 / FILM</i></div><h2>Studio journal</h2><p>Video · Behind the scenes</p></article>
           <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--two"><span class="video-play">▶</span><b>Petals<br>in motion</b><i>00:18 / FILM</i></div><h2>Petals in motion</h2><p>Video · Visual story</p></article>
-          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--three"><span class="video-play">▶</span><b>Made by<br>hand</b><i>00:32 / FILM</i></div><h2>Made by hand</h2><p>Video · Process</p></article>
+          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--three"><span class="video-play">▶</span><b>Made by<br>hand</b><i>00:32 / FILM</i></div><h2>Made by hand</h2><p>Video · Process</p></article>          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--four"><span class="video-play">▶</span><b>Color<br>study</b><i>00:21 / FILM</i></div><h2>Color study</h2><p>Video · Motion</p></article>
+          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--five"><span class="video-play">▶</span><b>Quiet<br>morning</b><i>00:16 / FILM</i></div><h2>Quiet morning</h2><p>Video · Lifestyle</p></article>
+          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--six"><span class="video-play">▶</span><b>Paper to<br>pixel</b><i>00:28 / FILM</i></div><h2>Paper to pixel</h2><p>Video · Process</p></article>
         </div>
       </div>
     </div>
+  </section>
+  <section class="member-gallery-page" id="member-gallery-page" aria-labelledby="member-gallery-title" hidden>
+    
+    <h1 id="member-gallery-title">Gallery</h1>
+    <p class="member-gallery-page__owner">A collection by <strong id="member-gallery-user">you</strong></p>
+    <div class="personal-gallery__filters" role="group" aria-label="Filter gallery">
+      <button type="button" data-gallery-filter="photos" aria-pressed="true">Photos</button>
+      <button type="button" data-gallery-filter="logos" aria-pressed="false">Logos</button>
+      <button type="button" data-gallery-filter="videos" aria-pressed="false">Videos</button>
+    </div>
+    <div class="personal-gallery__grid" id="member-gallery-grid"></div>
   </section>
 </main>
 
@@ -195,6 +226,18 @@
   </form>
 </dialog>
 
+<dialog class="gallery-preview" id="gallery-preview" aria-labelledby="gallery-preview-title">
+  <button class="gallery-preview__close" id="gallery-preview-close" type="button" aria-label="Close preview">×</button>
+  <p class="account-eyebrow" id="gallery-preview-kind">PHOTO PREVIEW</p>
+  <h2 id="gallery-preview-title">Preview</h2>
+  <div class="gallery-preview__media" id="gallery-preview-media"></div>
+  <p class="gallery-preview__description" id="gallery-preview-description"></p>
+  <div class="gallery-preview__actions">
+    <button class="account-edit-button" id="gallery-preview-play" type="button" hidden>Pause</button>
+    <button class="account-edit-button account-edit-save" id="gallery-preview-download" type="button">Download image</button>
+  </div>
+  <p class="gallery-preview__status" id="gallery-preview-status" role="status" aria-live="polite"></p>
+</dialog>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
  <script src="js/i18n.js"></script>
  <script src="config.js"></script>
