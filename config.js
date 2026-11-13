@@ -1,7 +1,7 @@
 /* L JAI Supabase connection settings.
    This file is public in the browser. Use only the publishable key here. */
 (() => {
-  SUPABASE_URL: 'https://jdilbwzpnfrzuliimgdc.supabase.co', 
+  SUPABASE_URL: 'https://jdilbwzpnfrzuliimgdc.supabase.co',   
   SUPABASE_ANON_KEY: 'sb_publishable_v1V0LgHVR_KDQZyI2_fJrg_TWZMwhjY',       	
   CONTACT_EMAIL: 'real.leonjai@gmail.com', 
   SITE_URL: 'https://jeisaru.com/',
