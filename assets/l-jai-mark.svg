@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">L JAI monogram</title>
+  <desc id="desc">Bold ivory LJ lettering in a vermilion and copper circular seal.</desc>
+  <circle cx="80" cy="80" r="75" fill="#fff8ec" stroke="#142c46" stroke-width="6"/>
+  <circle cx="80" cy="80" r="64" fill="#d9413a" stroke="#f4a12c" stroke-width="4"/>
+  <circle cx="80" cy="80" r="54" fill="none" stroke="rgba(255,248,236,.48)" stroke-width="1.5"/>
+  <text x="80" y="108" text-anchor="middle" fill="#fff1df" stroke="#a92d2c" stroke-width=".8" paint-order="stroke" font-family="Baskerville, 'Palatino Linotype', Georgia, serif" font-size="72" font-weight="700" letter-spacing="-11">LJ</text>
+  <g transform="translate(121 38)" fill="#f4a12c" stroke="#fff1df" stroke-width="1">
+    <ellipse cx="0" cy="-5" rx="3" ry="5"/><ellipse cx="0" cy="-5" rx="3" ry="5" transform="rotate(72)"/><ellipse cx="0" cy="-5" rx="3" ry="5" transform="rotate(144)"/><ellipse cx="0" cy="-5" rx="3" ry="5" transform="rotate(216)"/><ellipse cx="0" cy="-5" rx="3" ry="5" transform="rotate(288)"/><circle r="2" fill="#fff1df" stroke="none"/>
+  </g>
+</svg>
