@@ -136,24 +136,40 @@
   </section>
 
   <section class="account-page" id="account-page" aria-labelledby="account-title" hidden>
-    <div class="account-page__top"><div><p class="account-eyebrow">L JAI · <span id="account-gallery-user">YOUR GALLERY</span></p><h1 id="account-title">Gallery</h1></div><a class="account-home" href="#hero">Home <span aria-hidden="true">↗</span></a></div>
-    <div class="personal-gallery__intro"><p>A little collection of ideas, images, and things made with care.</p><button class="account-text-button account-password-button" id="account-password" type="button">Change password</button><button class="account-text-button account-signout" id="account-signout" type="button">Sign out <span aria-hidden="true">↗</span></button></div>
-    <div class="personal-gallery__filters" role="group" aria-label="Filter gallery">
-      <button type="button" data-gallery-filter="photos" aria-pressed="true">Photos</button>
-      <button type="button" data-gallery-filter="logos" aria-pressed="false">Logos</button>
-      <button type="button" data-gallery-filter="videos" aria-pressed="false">Videos</button>
-    </div>
-    <div class="personal-gallery__grid" id="personal-gallery-grid">
-      <article class="personal-work" data-kind="photos"><div class="gallery-art art-sakura"><span class="art-mark">✿</span><b>Sakura<br>season</b><i>01 / PHOTO</i></div><h2>Soft bloom</h2><p>Photo · Spring collection</p></article>
-      <article class="personal-work" data-kind="photos"><div class="gallery-art art-coast"><span class="art-mark">◒</span><b>Blue<br>hour</b><i>02 / PHOTO</i></div><h2>Quiet coast</h2><p>Photo · Places</p></article>
-      <article class="personal-work" data-kind="photos"><div class="gallery-art art-garden"><span class="art-mark">✳</span><b>In the<br>garden</b><i>03 / PHOTO</i></div><h2>Garden notes</h2><p>Photo · Details</p></article>
-      <article class="personal-work" data-kind="photos"><div class="gallery-art art-sun"><span class="art-mark">☼</span><b>Warm<br>light</b><i>04 / PHOTO</i></div><h2>Golden light</h2><p>Photo · Studies</p></article>
-      <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo"><span class="logo-round">LJ</span><b>L JAI</b><i>01 / IDENTITY</i></div><h2>L JAI Studio</h2><p>Logo · Brand identity</p></article>
-      <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--two"><span class="logo-round">花</span><b>HANAMI</b><i>02 / IDENTITY</i></div><h2>Hanami market</h2><p>Logo · Packaging</p></article>
-      <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--three"><span class="logo-round">K</span><b>KANTO<br>COFFEE</b><i>03 / IDENTITY</i></div><h2>Kanto Coffee</h2><p>Logo · Café</p></article>
-      <article class="personal-work" data-kind="videos"><div class="gallery-art art-video"><span class="video-play">▶</span><b>Studio<br>journal</b><i>00:24 / FILM</i></div><h2>Studio journal</h2><p>Video · Behind the scenes</p></article>
-      <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--two"><span class="video-play">▶</span><b>Petals<br>in motion</b><i>00:18 / FILM</i></div><h2>Petals in motion</h2><p>Video · Visual story</p></article>
-      <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--three"><span class="video-play">▶</span><b>Made by<br>hand</b><i>00:32 / FILM</i></div><h2>Made by hand</h2><p>Video · Process</p></article>
+    <div class="account-page__top"><div><p class="account-eyebrow">L JAI · YOUR SPACE</p><h1 id="account-title">Profile</h1></div><a class="account-home" href="#hero">Home <span aria-hidden="true">↗</span></a></div>
+    <div class="account-layout">
+      <aside class="account-rail">
+        <div class="account-avatar" aria-hidden="true">LJ</div>
+        <h2 id="account-name">Your name</h2>
+        <p id="account-email" class="account-email"></p>
+        <div class="account-rail__details">
+          <div><span>Birthday</span><strong id="account-birthday">Not provided</strong></div>
+          <div><span>Address</span><strong id="account-address">Not provided</strong></div>
+        </div>
+        <a class="account-home account-home--rail" href="#hero">⌂ <span>Home</span></a>
+        <button class="account-text-button account-password-button" id="account-password" type="button">Change password <span aria-hidden="true">↗</span></button>
+        <button class="account-text-button account-signout" id="account-signout" type="button">Sign out <span aria-hidden="true">↗</span></button>
+      </aside>
+      <div class="account-details">
+        <div class="account-details__heading"><div><p class="account-eyebrow">YOUR COLLECTION</p><h2>Gallery</h2></div><span class="account-gallery-user" id="account-gallery-user"></span></div>
+        <div class="personal-gallery__filters" role="group" aria-label="Filter gallery">
+          <button type="button" data-gallery-filter="photos" aria-pressed="true">Photos</button>
+          <button type="button" data-gallery-filter="logos" aria-pressed="false">Logos</button>
+          <button type="button" data-gallery-filter="videos" aria-pressed="false">Videos</button>
+        </div>
+        <div class="personal-gallery__grid" id="personal-gallery-grid">
+          <article class="personal-work" data-kind="photos"><div class="gallery-art art-sakura"><span class="art-mark">✿</span><b>Sakura<br>season</b><i>01 / PHOTO</i></div><h2>Soft bloom</h2><p>Photo · Spring collection</p></article>
+          <article class="personal-work" data-kind="photos"><div class="gallery-art art-coast"><span class="art-mark">◒</span><b>Blue<br>hour</b><i>02 / PHOTO</i></div><h2>Quiet coast</h2><p>Photo · Places</p></article>
+          <article class="personal-work" data-kind="photos"><div class="gallery-art art-garden"><span class="art-mark">✳</span><b>In the<br>garden</b><i>03 / PHOTO</i></div><h2>Garden notes</h2><p>Photo · Details</p></article>
+          <article class="personal-work" data-kind="photos"><div class="gallery-art art-sun"><span class="art-mark">☼</span><b>Warm<br>light</b><i>04 / PHOTO</i></div><h2>Golden light</h2><p>Photo · Studies</p></article>
+          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo"><span class="logo-round">LJ</span><b>L JAI</b><i>01 / IDENTITY</i></div><h2>L JAI Studio</h2><p>Logo · Brand identity</p></article>
+          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--two"><span class="logo-round">花</span><b>HANAMI</b><i>02 / IDENTITY</i></div><h2>Hanami market</h2><p>Logo · Packaging</p></article>
+          <article class="personal-work" data-kind="logos"><div class="gallery-art art-logo art-logo--three"><span class="logo-round">K</span><b>KANTO<br>COFFEE</b><i>03 / IDENTITY</i></div><h2>Kanto Coffee</h2><p>Logo · Café</p></article>
+          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video"><span class="video-play">▶</span><b>Studio<br>journal</b><i>00:24 / FILM</i></div><h2>Studio journal</h2><p>Video · Behind the scenes</p></article>
+          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--two"><span class="video-play">▶</span><b>Petals<br>in motion</b><i>00:18 / FILM</i></div><h2>Petals in motion</h2><p>Video · Visual story</p></article>
+          <article class="personal-work" data-kind="videos"><div class="gallery-art art-video art-video--three"><span class="video-play">▶</span><b>Made by<br>hand</b><i>00:32 / FILM</i></div><h2>Made by hand</h2><p>Video · Process</p></article>
+        </div>
+      </div>
     </div>
   </section>
 </main>

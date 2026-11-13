@@ -635,3 +635,16 @@ body.profile-active .site-footer{display:none}
 .password-visibility svg{width:1.3rem;height:1.3rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .password-visibility .eye-slash{display:block}
 .password-visibility.is-visible .eye-slash{display:none}
+
+/* Profile sketch layout: member details beside their personal gallery. */
+.account-rail__details{width:100%;margin:0 0 1rem;border-top:1px solid color-mix(in srgb,var(--sumi) 20%,transparent)}
+.account-rail__details>div{display:grid;gap:.25rem;padding:.75rem 0;border-bottom:1px solid color-mix(in srgb,var(--sumi) 16%,transparent)}
+.account-rail__details span{font-size:.82rem;opacity:.68}.account-rail__details strong{font-size:.92rem;font-weight:600;overflow-wrap:anywhere;white-space:pre-line}
+.account-gallery-user{max-width:42%;padding:.4rem .7rem;border:1px solid color-mix(in srgb,var(--shu) 55%,transparent);border-radius:999px;background:color-mix(in srgb,var(--sakura) 38%,transparent);font-size:.82rem;font-weight:700;overflow-wrap:anywhere;text-align:center}
+.account-details .personal-gallery__filters{justify-content:flex-start;margin:.2rem 0 1.3rem}
+.account-details .personal-gallery__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
+.account-details .gallery-art{min-height:145px}
+.account-details .personal-work h2{font-size:.98rem}
+.account-details .personal-work p{font-size:.8rem}
+@media(max-width:900px){.account-details .personal-gallery__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.account-rail{padding:1.2rem}.account-details{padding:1rem}.account-details .personal-gallery__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.account-details .gallery-art{min-height:125px}.account-gallery-user{max-width:48%}}
