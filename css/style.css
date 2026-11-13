@@ -625,3 +625,13 @@ body.profile-active .site-footer{display:none}
 .personal-gallery__intro .account-password-button{width:auto;margin:0;padding:.55rem .9rem;border:1.5px solid var(--sumi);border-radius:999px;opacity:1;white-space:nowrap;color:var(--sumi)}
 .personal-gallery__intro .account-signout{margin:0}
 .personal-gallery__intro{flex-wrap:wrap}
+
+/* Accessible show/hide control for the shared sign-in and create-account password field. */
+.password-input-wrap{position:relative;width:100%;display:block}
+#auth-form .password-input-wrap input{width:100%;padding-right:3.3rem}
+.password-visibility{position:absolute;right:.55rem;top:50%;display:grid;place-items:center;width:2.25rem;height:2.25rem;padding:0;transform:translateY(-50%);border:0;border-radius:9px;background:transparent;color:var(--sumi);cursor:pointer;box-shadow:none}
+.password-visibility:hover{background:color-mix(in srgb,var(--sakura) 55%,transparent)}
+.password-visibility:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+.password-visibility svg{width:1.3rem;height:1.3rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.password-visibility .eye-slash{display:block}
+.password-visibility.is-visible .eye-slash{display:none}

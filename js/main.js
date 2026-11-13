@@ -234,10 +234,21 @@
   });
   $('#auth-switch').addEventListener('click', () => setMode(mode === 'in' ? 'up' : 'in'));
   $('#auth-forgot').addEventListener('click', () => setMode('reset'));
-  af.addEventListener('submit', async e => {
+  $$('.password-visibility').forEach(button => {
+    button.addEventListener('click', () => {
+      const input = button.closest('.password-input-wrap')?.querySelector('input');
+      if (!input) return;
+      const visible = input.type === 'password';
+      input.type = visible ? 'text' : 'password';
+      button.setAttribute('aria-pressed', String(visible));
+      button.setAttribute('aria-label', visible ? 'Hide password' : 'Show password');
+      button.title = visible ? 'Hide password' : 'Show password';
+      button.classList.toggle('is-visible', visible);
+    });
+  });  af.addEventListener('submit', async e => {
     e.preventDefault();
     const sb = authClient();
-    if (!sb?.auth) return say(ast, t('auth.unconfigured'), 1);
+    if (!sb?.auth) return say(ast, window.ljaiSupabaseMessage || t('auth.unconfigured'), 1);
     const pw = af.password.value;
     if (mode !== 'reset' && pw.length < 6) return say(ast, t('err.pw'), 1);
     try {

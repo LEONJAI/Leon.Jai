@@ -1,22 +1,27 @@
 /* L JAI Supabase connection settings.
-   Paste your Project URL and publishable key from Supabase here.
-   This file is public in the browser: never paste a secret/service-role key. */
+   This file is public in the browser. Use only the publishable key here. */
 (() => {
-   
   SUPABASE_URL: 'https://jdilbwzpnfrzuliimgdc.supabase.co', 
-  SUPABASE_ANON_KEY: 'sb_publishable_v1V0LgHVR_KDQZyI2_fJrg_TWZMwhjY', 
+  SUPABASE_ANON_KEY: 'sb_publishable_v1V0LgHVR_KDQZyI2_fJrg_TWZMwhjY',       	
   CONTACT_EMAIL: 'real.leonjai@gmail.com', 
   SITE_URL: 'https://jeisaru.com/',
 
-  const needsSetup = SUPABASE_URL.includes('https://jdilbwzpnfrzuliimgdc.supabase.co') ||
-    SUPABASE_PUBLISHABLE_KEY.includes('sb_publishable_v1V0LgHVR_KDQZyI2_fJrg_TWZMwhjY');
+  const needsSetup = SUPABASE_URL.includes('YOUR_PROJECT_REF') ||
+    SUPABASE_PUBLISHABLE_KEY.includes('REPLACE_WITH_YOUR_KEY');
   if (needsSetup) {
-    console.info('Supabase is not connected yet. Edit config.js with your project URL and publishable key.');
+    window.ljaiSupabaseMessage = 'In the website root config.js, add BOTH your Supabase Project URL and Publishable key, save, then reload the website.';
     return;
   }
   if (!window.supabase?.createClient) {
-    console.error('Supabase library did not load. Check your internet connection or CDN access.');
+    window.ljaiSupabaseMessage = 'The Supabase library did not load. Check your internet connection or CDN access, then reload.';
+    console.error(window.ljaiSupabaseMessage);
     return;
   }
-  window.supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+  try {
+    window.supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+    window.ljaiSupabaseMessage = '';
+  } catch (error) {
+    window.ljaiSupabaseMessage = 'Supabase could not start. Check the Project URL and Publishable key in the website root config.js.';
+    console.error(window.ljaiSupabaseMessage, error);
+  }
 })();
